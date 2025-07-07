@@ -52,7 +52,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 const SECURE = jwk({
-    jwks: "http://localhost:8080/.wellknown/jwks.json",
+    jwks: "http://localhost:8800/.well-known/jwks.json",
 });
 
 /************************************************************************************
@@ -77,7 +77,7 @@ app.get("/chat", (req, res) => {
         cookieUid = cookieUid && cookieUid !== "" ? cookieUid : null;
         const defaultUid = uuidv4().substring(0, 8);
         const userInfo = {
-            shuntCode: query.sc,
+            shuntId: query.sc,
             // 如果没有传递 uid 就自动生成一个
             uid: query.uid ?? cookieUid ?? `guest_${defaultUid}`,
             staffId: query.staffId,

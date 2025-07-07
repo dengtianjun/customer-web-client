@@ -28,7 +28,7 @@
     "ts-node": "^9.0.0",
     "ts-toolbelt": "^9.6.0",
     "tslib": "^2.0.3",
-    "typescript": "^4.0.5"
+    "typescript": "^3.9.10"
   },
   "peerDependencies": {
     "ChatUI": "npm:@chatui/core@^1.1.2",

@@ -9,8 +9,8 @@ import { v4 as uuidv4 } from "uuid";
 
 const serviceName = 'chat-server';
 const consul = new Consul({
-    host: '192.168.50.108',
-    port: "80",
+    host: '192.168.1.253',
+    port: "8500",
     promisify: true,
 });
 

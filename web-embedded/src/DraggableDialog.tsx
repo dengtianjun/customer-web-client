@@ -187,7 +187,7 @@ export default function DraggableDialog(accessParamProp: DraggableDialogProps) {
     Cookies.set('xiaobai_uid', accessParam.uid, { expires: 10 * 365 })
     return addParam(
       // 修改为服务地址
-      customerHost ?? 'https://im.xbcs.top/chat/',
+      customerHost ?? 'http://localhost:8800/chat/',
       accessParam
     );
   }, []);
@@ -218,7 +218,7 @@ export default function DraggableDialog(accessParamProp: DraggableDialogProps) {
     () => {
       // 每 2 分钟定时发送用户浏览轨迹
       if (accessParam.sc && accessParam.uid) {
-        const trackUrl = 'https://im.xbcs.top/access/customer/track';
+        const trackUrl = 'http://localhost:8800/access/customer/track';
         // 统计跳转网页
         if (document.referrer) {
           const referrerUserTrack = {
